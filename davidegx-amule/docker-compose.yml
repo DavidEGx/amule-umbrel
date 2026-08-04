@@ -10,6 +10,13 @@ services:
     image: ghcr.io/davidegx/amule-umbrel:3.0.1@sha256:3f6e38ca6764b28aceafe54c6a24580edea549ece74f99bef970107ef318e9bb
     init: true
     user: "1000:1000"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:uid=1000,gid=1000,mode=0700
     environment:
       APP_PASSWORD: ${APP_PASSWORD}
     volumes:
