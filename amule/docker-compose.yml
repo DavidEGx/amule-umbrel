@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: amule_server_1
+      APP_PORT: 4711
+
+  server:
+    image: ghcr.io/davidegx/amule-umbrel:3.0.1
+    init: true
+    user: "1000:1000"
+    environment:
+      APP_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+    ports:
+      - "4662:4662/tcp"
+      - "4672:4672/udp"
+    restart: on-failure

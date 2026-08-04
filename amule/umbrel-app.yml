@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: amule
+category: networking
+name: aMule
+version: "3.0.1"
+tagline: Share files over the eD2k and Kad networks
+description: >-
+  aMule is a free, open-source peer-to-peer file sharing client for the
+  eD2k and Kad networks. This package runs the headless aMule daemon and its
+  native WebUI. Completed files are stored in Downloads/amule/complete and
+  partial files in Downloads/amule/incomplete.
+
+
+  Sign in to the WebUI with the password shown by Umbrel. For best connectivity,
+  forward TCP port 4662 and UDP port 4672 from your router to your Umbrel device.
+  Traffic uses the clearnet and is not routed through Tor.
+releaseNotes: ""
+
+developer: The aMule Project
+website: https://amule-org.github.io/
+dependencies: []
+repo: https://github.com/davidegx/amule-umbrel
+support: https://github.com/davidegx/amule-umbrel/issues
+
+port: 4788
+gallery: []
+path: ""
+
+defaultUsername: ""
+defaultPassword: ""
+deterministicPassword: true
+
+permissions:
+  - STORAGE_DOWNLOADS
+
+submitter: Community
+submission: ""
