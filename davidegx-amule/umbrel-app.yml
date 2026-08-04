@@ -4,6 +4,7 @@ category: networking
 name: aMule
 version: "3.0.1"
 tagline: Share files over the eD2k and Kad networks
+icon: https://raw.githubusercontent.com/davidegx/amule-umbrel/master/davidegx-amule/icon.png
 description: >-
   aMule is a free, open-source peer-to-peer file sharing client for the
   eD2k and Kad networks. This package runs the headless aMule daemon and its
