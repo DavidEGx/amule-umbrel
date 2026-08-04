@@ -1,7 +1,7 @@
 services:
   amule:
     build:
-      context: ./amule/docker
+      context: ./davidegx-amule/docker
       args:
         AMULE_VERSION: 3.0.1
     image: amule-umbrel:3.0.1

@@ -38,7 +38,7 @@ jobs:
       - name: Build and publish amd64 and arm64 image
         uses: docker/build-push-action@v6
         with:
-          context: ./amule/docker
+          context: ./davidegx-amule/docker
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.image.outputs.name }}:3.0.1
